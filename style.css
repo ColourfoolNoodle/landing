@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+.hero {
+    background: #ffffff;
+    color: #333;
+    padding: 150px 0;
+    text-align: center;
+}
+
+.hero-content {
+    /* max-width: 600px; */
+    width: 100%;
+    /* или любое нужное тебе значение */
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: clamp(40px, 8vw, 70px);
+    white-space: nowrap;
+    /* ← запретить перенос */
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 24px;
+    margin-top: 60px;
+    padding: 12px 24px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* все буквы заглавные */
+    letter-spacing: 2px;
+    /* расстояние между буквами */
+}
+
+body {
+    font-size: 16px;
+    /* стандартный размер текста */
+    line-height: 1.5;
+}
+
+.about {
+    background-color: #333;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.about p {
+    font-size: 1.2rem;
+}
+
+.all_we_can {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    background-color: #fff;
+    color: #333;
+}
+
+.services-table {
+    border-collapse: collapse;
+    /* убираем отступы между ячейками */
+    margin: 0 auto;
+    /* центрируем таблицу */
+}
+
+.services-table h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.services-table td {
+    vertical-align: center;
+    /* выравниваем содержимое ячеек по верху */
+    padding: 20px;
+    /* отступ вокруг текста/картинки */
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.services-table img {
+    display: block;
+    max-width: 250px;
+    /* контролируем ширину */
+    height: auto;
+    /* сохраняем пропорции */
+    margin: 0 auto;
+    /* центрируем внутри ячейки */
+}
+
+.works {
+    background: #333;
+    color: #fff;
+    padding: 80px 0;
+}
+
+/* Центрируем текст */
+.works__intro {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.works__intro h3 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.works__intro p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Слайдер */
+.works__slider {
+    display: flex;
+    overflow-x: auto;
+    /* включаем горизонтальную прокрутку */
+    gap: 20px;
+    /* отступ между слайдами */
+    padding: 0 20px;
+    scroll-snap-type: x mandatory;
+    /* «прилипающие» слайды */
+    width: 80%;
+    /* или width: 80vw; */
+    max-width: 1200px;
+    /* гарантирует, что 5×200px + gaps > 800px → появится overflow */
+    margin: 0 auto;
+    /* по центру */
+    padding-bottom: 20px;
+}
+
+/* Google Chrome, Safari и прочие на WebKit */
+.works__slider::-webkit-scrollbar {
+    height: 12px;
+    /* толщина горизонтального скроллбара */
+}
+
+.works__slider::-webkit-scrollbar-track {
+    background: #333;
+    /* цвет «рельсов» */
+}
+
+.works__slider::-webkit-scrollbar-thumb {
+    background: #fff;
+    /* цвет «ползунка» */
+    border-radius: 6px;
+    /* скругление края */
+}
+
+/* Mozilla Firefox */
+.works__slider {
+    scrollbar-width: auto;
+    /* можно thin или auto */
+    scrollbar-color: #fff #333;
+    /* thumb track */
+}
+
+/* Слайды */
+.works__slider img {
+    flex: 0 0 auto;
+    /* не растягивать в flex */
+    width: 500px;
+    /* фиксированная ширина слайда */
+    height: auto;
+    /* сохраняем пропорции */
+    scroll-snap-align: start;
+    /* «прилипание» к началу */
+    border-radius: 8px;
+    /* скруглённые углы (по желанию) */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Общие стили */
+.feedback {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin: 40px 250px;
+}
+
+.feedback_main h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #333;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/* Аватар */
+.feedback__avatar {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+/* Пузырь отзыва */
+.feedback__bubble {
+    background: #333;
+    border-radius: 8px;
+    padding: 16px 20px;
+    max-width: 600px;
+    position: relative;
+    text-align: left;
+    /* по умолчанию левый */
+}
+
+
+/* Имя и текст */
+.feedback__name {
+    margin: 0 0 8px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.feedback__text {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* --- Модификатор для правого блока --- */
+.feedback--right {
+    flex-direction: row-reverse;
+    /* меняем порядок */
+}
+
+.feedback--right .feedback__avatar {
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.feedback--right .feedback__bubble {
+    text-align: right;
+    /* текст выравниваем по правому краю */
+}
+
+.site-footer {
+    background-color: #333;   /* тёмно-серый фон */
+    color: #fff;              /* белый текст */
+    padding: 60px 20px;       /* отступы сверху/снизу и по бокам */
+  }
+  
+  /* Основной контейнер секций */
+  .footer__content {
+    display: flex;
+    flex-wrap: wrap;          /* падают на новую строку на узких экранах */
+    gap: 40px;                /* расстояние между секциями */
+    max-width: 1200px;
+    margin: 0 auto;           /* центрируем в странице */
+  }
+  
+  /* Каждый блок внутри футера */
+  .footer__section {
+    flex: 1;                  /* делит пространство поровну */
+    min-width: 200px;         /* не становится уже этого */
+  }
+  
+  /* Заголовки внутри футера */
+  .footer__title {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  
+  /* Ссылки и список соцсетей */
+  .footer__social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer__social li + li {
+    margin-top: 8px;
+  }
+  
+  .footer__social a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer__social a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Нижняя строка с копирайтом */
+  .footer__bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;  /* тонкая линия сверху */
+    padding-top: 20px;
+  }
